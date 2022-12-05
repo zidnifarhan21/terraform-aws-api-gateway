@@ -11,9 +11,10 @@ resource "aws_autoscaling_group" "my-app" {
     launch_template {
       launch_template_specification {
         launch_template_id = aws_launch_template.my-app.id
+        version = "$Latest"
       }
       override {
-        instance_type     = "t3.small"
+        instance_type = "t3.small"
       }
     }
   }

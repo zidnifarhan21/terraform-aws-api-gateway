@@ -8,6 +8,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.23.0"
     }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "~> 4.0.4"
+    }
   }
 
   required_version = "~> 1.0"
@@ -16,5 +20,4 @@ terraform {
 # Note
 # Something that need to predefined manually
 # 1. Create IAM Access Key
-# 2. Create Keypair
-# 3. Create Image AMI
+# 2. Create Image AMI
